@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 if not int(number):
-    print("TypeError")
+    return False
 last = str(number)
 theLast = int(last[-1])
 if number < 0:
