@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-print(''.join(["{:c}".format(122 - i // 2) if i % 2 == 0 else "{:c}".format(90 - (i - 1) // 2) 
-               for i in range(52)][::2]))
+for i in range(122, 96, -1):
+    print("{}".format(chr(i) if i % 2 == 0 else chr(i-32), end=''))
