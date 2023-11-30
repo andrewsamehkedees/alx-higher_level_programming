@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
 
-num = len(argv)
+num = len(sys.rgv)
 count = 0
 if num == 0:
     print ("0 arguments.")
