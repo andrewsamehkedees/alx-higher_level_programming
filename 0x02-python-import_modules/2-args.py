@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 import sys
 
-num = len(sys.rgv)
+num = len(sys.argv) - 1
 count = 0
 if num == 0:
     print ("0 arguments.")
 else:
     print("{} arguments:".format(num))
-    for i in argv:
-        print("{}: {}".format(count, i))
+    for arg in sys.argv:
+        print("{}: {}".format(count, arg))
