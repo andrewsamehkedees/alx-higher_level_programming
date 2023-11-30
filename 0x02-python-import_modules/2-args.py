@@ -5,7 +5,7 @@ if __name__ == "__main__":
     num = len(sys.argv) - 1
     count = 0
     if num == 0:
-        print("{} arguments.".format(num))
+        print("0 arguments.")
     else:
         print("{} arguments:".format(num))
         for arg in sys.argv:
