@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+"""Defines a class Square"""
+
+
 class Square:
-    """This is a class that defines a square.
-    It is used to control the size attribute in a square object.
+    """
+    Class that defines square
     """
     def __init__(self, size):
-        """Creates new instances of square (1 side).
+        """the constractor of the class
 
         Args:
             size: size of the square.
