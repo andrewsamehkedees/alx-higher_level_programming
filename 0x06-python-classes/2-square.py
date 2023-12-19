@@ -7,6 +7,9 @@ class Square:
         """this is the constractor
         Args:
             size: the default valeo is 0
+        Raises:
+            TypeError: the type of the input
+            ValueError: the value of the input
         """
 
         if not isinstance(size, int):
