@@ -1,16 +1,23 @@
 #!/usr/bin/python3
 import sys
 import json
+"""function save"""
 
-save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
+def save_to_json_file(my_obj, filename):
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(json.dumps(my_obj))
 
-if __name__ == "__main__":
-    try:
-        json_list = load_from_json_file('add_item.json')
-    except FileNotFoundError:
-        json_list = []
+"""function load"""
+def load_from_json_file(filename):
+    with open(filename, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    for i in range(1, len(sys.argv)):
-        json_list.append(sys.argv[i])
-    save_to_json_file(json_list, "add_item.json")
+filename = "add_item.json"
+if os.path.isfile(filename):
+    my_list = load_from_json_file(filename)
+else:
+    my_list = []
+
+my_list.extend(sys.argv[1:])
+save_to_json_file(my_list, filename)
+
