@@ -1,5 +1,27 @@
-.....
-----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+"""
+This module contains test cases for the MyList class.
+"""
 
-OK
+import doctest
+MyList = __import__('1-my_list').MyList
+
+def test_sorted():
+    """
+    Test case for the print_sorted method of the MyList class.
+
+    >>> my_list = MyList()
+    >>> my_list.extend([1, 4, 2, 3, 5])
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    """
+
+def test_inheritance():
+    """
+    Test case to check if MyList properly inherits from list.
+
+    >>> issubclass(MyList, list)
+    True
+    """
+
+if __name__ == "__main__":
+    doctest.testmod()
